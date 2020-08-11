@@ -12,6 +12,6 @@ biases = [2.0, 3.0, 0.5]
 
 layer_outputs =[]
 
-output = np.dot(weights, inputs) + biases
+output = np.dot(inputs, np.array(weights).T) + biases
 
 print(output)
