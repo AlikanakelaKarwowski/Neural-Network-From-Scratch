@@ -8,4 +8,4 @@
 /httpRequests/
 venv/
 .idea/
-p7.py
+.vscode/settings.json
