@@ -25,6 +25,13 @@ class Activation_Softmax:
         probabilities = exp_values / np.sum(exp_values, axis=1, keepdims=True)        
         self.output = probabilities
 
+
+class Loss:
+    def calculate(self, output, y):
+        sample_losses = self.forward(output,y)
+        data_loss = np.mean(sample_losses)
+        return data_loss
+    
 X, y = spiral_data(samples=100, classes=3)
 
 dense1 = Layer_Dense(2, 3)
